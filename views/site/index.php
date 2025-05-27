@@ -16,33 +16,37 @@ $this->title = 'โรงพยาบาลเลย';
         <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
     </div>
 
-    <div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel">
+    <!-- Carousel -->
+    <!-- Carousel -->
+<div class="container mb-5">
+    <div id="myCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
         <div class="carousel-inner text-center">
             <div class="carousel-item active">
                 <img src="https://www.loeihospital.go.th/internet/uploads/0a44ca6cc9e8ef95aabbcb92ac1e563b.jpg"
-                    class="d-inline-block carousel-image" alt="...">
+                    class="d-block mx-auto carousel-image" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="https://www.loeihospital.go.th/internet/photos/_fk40pMJ3mYlLFajSFpAE8/e6e17d013e427017a4d21f3b919ef5da.jpg"
-                    class="d-inline-block carousel-image" alt="...">
+                    class="d-block mx-auto carousel-image" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="https://www.loeihospital.go.th/internet/photos/_fk40pMJ3mYlLFajSFpAE8/7a33967915d3ade4f040a66f38fc3174.jpg"
-                    class="d-inline-block carousel-image" alt="...">
+                    class="d-block mx-auto carousel-image" alt="...">
             </div>
         </div>
-    </div>
 
-    <!-- ปุ่มควบคุม -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-    
+        <!-- ปุ่มควบคุม -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-2 opacity-75" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-2 opacity-75" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
 </div>
 
 <div class="body-content">

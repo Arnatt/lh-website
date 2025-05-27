@@ -19,6 +19,11 @@ $this->registerMetaTag(['name' => 'description', 'content' => $this->params['met
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
 ?>
+<?php
+$this->registerCssFile('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css', [
+    'depends' => [\yii\bootstrap5\BootstrapAsset::class],
+]);
+?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
@@ -51,6 +56,17 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
                         ['label' => 'รับสมัครงาน', 'url' => ['/site/job']],
                     ],
                 ],
+                [
+                    'label' => 'บริการออนไลน์',
+                    'items' => [
+                        ['label' => 'นัดหมายแพทย์', 'url' => ['/site/appointment']],
+                        ['label' => 'ตรวจสอบสิทธิ์', 'url' => ['/site/check-eligibility']],
+                        ['label' => 'ประวัติการรักษา', 'url' => ['/site/medical-history']],
+                    ]
+                ],
+                ['label' => 'เกี่ยวกับเรา', 'url' => ['/site/about']],
+                ['label' => 'ติดต่อเรา', 'url' => ['/site/contact']],
+
                 Yii::$app->user->isGuest
                 ? ['label' => 'Login', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
@@ -77,25 +93,8 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
         </div>
     </main>
 
-    <footer id="footer" class="mt-auto py-3 bg-secondary bg-opacity-25">
-        <div class="container">
-            <div class="row">
-                <div class="lh-map col">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.4156506747013!2d101.7200383751672!3d17.487660983416742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x312147ecf1080365%3A0xff9a24007091b4ca!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4LmA4Lil4Lii!5e0!3m2!1sth!2sth!4v1748251061740!5m2!1sth!2sth"
-                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-            </div>
 
-            <div class="text-muted text-center">
-                <div class="fw-bold">LOEI HOSPITAL</div>
-                <div>พัฒนาโดย กลุ่มงานเทคโนโลยีสารสนเทศ</div>
-            </div>
-        </div>
-    </footer>
-
+    <?= $this->render('footer') ?>
     <?php $this->endBody() ?>
 </body>
 
