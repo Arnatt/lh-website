@@ -1,0 +1,90 @@
+:root {
+    --primary-green: #74c52c;
+    --secondary-charcoal: #687074;
+    --light-grey: #f8f9fa;
+    --white: #ffffff;
+    --dark-green: #61a823; /* A slightly darker green for hover/active states */
+    --darker-green: #52911b; /* An even darker green for active states */
+    --footer-bg: #495057; /* A dark charcoal for the main footer */
+    --footer-text-color: #e9ecef; /* Light text for dark background */
+    --footer-link-color: #a2d24a; /* Primary green for links */
+    --footer-bottom-bar-bg: #343a40; /* Even darker for copyright bar */
+}
+
+/* ... (Previous CSS for header, contact page, opd schedule page, news section etc. go here) ... */
+
+/* --- Footer Styles --- */
+#main-app-footer {
+    background-color: var(--footer-bg); /* Dark charcoal background */
+    color: var(--footer-text-color); /* Light text color */
+    border-top: 5px solid var(--primary-green); /* Green top border */
+    font-size: 0.95rem; /* Slightly smaller text for footer */
+}
+
+.footer-heading {
+    color: var(--primary-green) !important; /* Force primary green for headings */
+    font-weight: 700;
+    font-size: 1.5rem; /* Larger heading */
+}
+
+.footer-text {
+    color: var(--footer-text-color);
+    line-height: 1.7; /* Improve readability */
+}
+
+.footer-contact-list li {
+    margin-bottom: 0.5rem; /* Spacing between contact items */
+}
+
+.footer-icon {
+    color: var(--primary-green); /* Green icons */
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+.footer-link {
+    color: var(--footer-link-color); /* Primary green for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--white); /* White on hover */
+    text-decoration: underline;
+}
+
+.social-icon-link {
+    color: var(--primary-green); /* Green icons */
+    font-size: 1.8rem; /* Large icons */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon-link:hover {
+    color: var(--white); /* White on hover */
+    transform: translateY(-3px); /* Subtle lift effect */
+}
+
+.footer-copyright-bar {
+    background-color: var(--footer-bottom-bar-bg); /* Even darker background */
+    color: rgba(255, 255, 255, 0.7); /* Slightly transparent white text */
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+}
+
+.footer-copyright-link {
+    color: rgba(255, 255, 255, 0.9); /* Slightly brighter white for link */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-copyright-link:hover {
+    color: var(--primary-green); /* Green on hover */
+    text-decoration: underline;
+}
+
+/* Map responsive styling (ensure this is present from previous steps) */
+.map-responsive {
+    border-radius: 8px; /* Rounded corners for map iframe */
+    overflow: hidden; /* Ensures corners are rounded */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border around map */
+}

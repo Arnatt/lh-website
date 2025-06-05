@@ -1,5 +1,247 @@
+:root {
+    --primary-green: #74c52c;
+    --secondary-charcoal: #687074;
+    --light-grey: #f8f9fa;
+    --white: #ffffff;
+    --dark-green: #61a823; /* A slightly darker green for hover/active states */
+    --darker-green: #52911b; /* An even darker green for active states */
+}
+
+/* ===================== News/Tabs Section Styles ======================== */
+
+.site-tab-section {
+    background-color: var(--light-grey); /* พื้นหลังสีอ่อนสำหรับส่วนนี้ */
+    /* py-5 ถูกกำหนดใน HTML แล้ว */
+}
+
+/* Custom Tabs (Nav-pills) */
+.custom-tabs .nav-link {
+    color: var(--secondary-charcoal); /* สีข้อความปกติ */
+    font-weight: 500;
+    margin: 0 0.5rem; /* ระยะห่างระหว่างปุ่ม */
+    border-radius: 0.75rem; /* มุมโค้งมน */
+    padding: 0.8rem 1.5rem; /* ขนาดปุ่ม */
+    transition: all 0.3s ease; /* Transition effect */
+    border: 1px solid var(--primary-green); /* เพิ่ม border ให้ปุ่ม */
+    background-color: var(--white);
+}
+
+.custom-tabs .nav-link:hover {
+    color: var(--white); /* สีข้อความเมื่อ hover */
+    background-color: var(--primary-green); /* สีพื้นหลังเมื่อ hover */
+    border-color: var(--primary-green);
+    transform: translateY(-2px); /* ยกขึ้นเล็กน้อยเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.custom-tabs .nav-link.active {
+    background-color: var(--primary-green) !important; /* สีพื้นหลัง active */
+    color: var(--white) !important; /* สีข้อความ active */
+    border-color: var(--primary-green) !important;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Shadow ที่เด่นขึ้นสำหรับ active */
+}
+
+/* Custom News List Items */
+.custom-news-list {
+    background-color: var(--white);
+    border-radius: 0.75rem;
+    overflow: hidden; /* เพื่อให้มุมโค้งมนของ border ทำงานได้ดี */
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.08); /* เงาสำหรับ list โดยรวม */
+}
+
+.custom-news-item {
+    padding: 1.25rem 1.5rem; /* เพิ่ม padding */
+    border-bottom: 1px solid var(--light-grey); /* เส้นแบ่งระหว่างรายการ */
+    color: var(--secondary-charcoal);
+    transition: all 0.3s ease;
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+}
+
+.custom-news-item:last-child {
+    border-bottom: none; /* ไม่มีเส้นแบ่งที่รายการสุดท้าย */
+}
+
+.custom-news-item:hover {
+    background-color: var(--light-grey); /* พื้นหลังเมื่อ hover */
+    color: var(--primary-green); /* ข้อความเปลี่ยนเป็นสีเขียวเมื่อ hover */
+    transform: translateX(5px); /* เลื่อนไปทางขวาเล็กน้อยเมื่อ hover */
+}
+
+.custom-news-item:hover h6 {
+    color: var(--primary-green); /* หัวข้อข่าวเปลี่ยนเป็นสีเขียวเมื่อ hover */
+}
+
+.custom-news-icon {
+    font-size: 1.8rem; /* ขนาด icon */
+    color: var(--primary-green); /* สี icon */
+    min-width: 40px; /* กำหนดความกว้างขั้นต่ำเพื่อให้ icon มีพื้นที่เท่ากัน */
+    text-align: center;
+}
+
+/* General text and icon colors (จากโค้ดเดิมของคุณ) */
+.primary-color-text {
+    color: var(--primary-green) !important;
+}
+.primary-color-icon {
+    color: var(--primary-green) !important;
+}
+.secondary-color-text {
+    color: var(--secondary-charcoal) !important;
+}
+.page-heading {
+    color: var(--primary-green);
+    font-weight: 700;
+}
+
+/* Custom button for green (จากโค้ดเดิมของคุณ) */
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover,
+.btn-primary-green:focus {
+    background-color: var(--dark-green);
+    border-color: var(--dark-green);
+    box-shadow: 0 0 0 0.25rem rgba(116, 197, 44, 0.25);
+}
+
+.btn-primary-green.active, .btn-primary-green:active {
+    background-color: var(--darker-green) !important;
+    border-color: var(--darker-green) !important;
+}
+ /*=================== Image =======================*/
 .carousel-image {
     width: 600px;     /* ปรับขนาดที่ต้องการ */
     height: 300px;    /* ปรับให้เท่ากันทุกรูป */
     object-fit: cover; /* ทำให้ภาพครอบเต็มโดยไม่ผิดสัดส่วน */
+}
+
+.img-opd {
+    object-fit: cover;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับภาพ */
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+.img-viproom {
+    object-fit: cover;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาให้กับภาพ */
+    margin-bottom: 30px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+
+/* =============== Contact ====================== */
+:root {
+    --primary-green: #74c52c;
+    --secondary-charcoal: #687074;
+    --light-grey: #f8f9fa; /* Bootstrap's bg-light */
+    --white: #ffffff;
+}
+
+/* General Body and Text */
+body {
+    font-family: 'Kanit', sans-serif; /* Example font, ensure it's imported or available */
+    color: var(--secondary-charcoal); /* Default text color */
+}
+
+/* Headings and Primary Accents */
+.primary-color-text {
+    color: var(--primary-green) !important; /* Force primary green for headings */
+}
+
+.primary-color-icon {
+    color: var(--primary-green) !important; /* Force primary green for icons */
+}
+
+.secondary-color-text {
+    color: var(--secondary-charcoal) !important; /* Force secondary charcoal for specific text */
+}
+
+.icon-secondary-color {
+    color: var(--secondary-charcoal) !important; /* Force secondary charcoal for specific icons */
+}
+
+.page-heading {
+    font-size: 2.5rem; /* Larger heading for the page title */
+    font-weight: 700;
+}
+
+/* Buttons */
+.btn-primary-green {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-green:hover,
+.btn-primary-green:focus {
+    background-color: darken(var(--primary-green), 10%); /* Adjust 10% as needed */
+    border-color: darken(var(--primary-green), 10%);
+    box-shadow: 0 0 0 0.25rem rgba(116, 197, 44, 0.25); /* Focus ring with primary green */
+}
+
+.btn-primary-green.active, .btn-primary-green:active {
+    background-color: darken(var(--primary-green), 15%) !important;
+    border-color: darken(var(--primary-green), 15%) !important;
+}
+
+
+/* Card Styling for Contact Info and Form */
+.contact-info-card,
+.map-card,
+.contact-form-card {
+    border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border */
+    border-top: 5px solid var(--primary-green); /* Green top border for emphasis */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important; /* Lighter shadow */
+    transition: transform 0.2s ease-in-out;
+}
+
+.contact-info-card:hover,
+.map-card:hover,
+.contact-form-card:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important; /* More pronounced shadow on hover */
+}
+
+
+/* Specific styles for contact items */
+.contact-item {
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.contact-item i {
+    font-size: 1.2em; /* Slightly larger icons */
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+/* Map specific styling */
+.map-responsive {
+    border-radius: 8px; /* Rounded corners for map iframe */
+    overflow: hidden; /* Ensures corners are rounded */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Subtle border around map */
+}
+
+
+/* Form specific styling */
+.contact-form-card .form-label {
+    font-weight: 500;
+    color: var(--secondary-charcoal);
+}
+
+.contact-form-card .form-control:focus {
+    border-color: var(--primary-green);
+    box-shadow: 0 0 0 0.25rem rgba(116, 197, 44, 0.25);
+}
+
+/* Optional: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .page-heading {
+        font-size: 2rem;
+    }
 }

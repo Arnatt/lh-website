@@ -1,3 +1,4 @@
+
 <?php if (empty($this->params['hideFooter'])): ?>
     <div class="container py-5">
         <div class="row align-items-center">
@@ -19,8 +20,8 @@
                         <p class="mb-2"><strong>โรงพยาบาลเลย</strong><br>
                             เลขที่ 1 ถนนเลย-เชียงคาน ตำบลกุดป่อง อำเภอเมือง จังหวัดเลย 42000
                         </p>
-                        <p class="mb-1"><i class="bi bi-telephone"></i> TEL: 042-812-200, 042-812-201</p>
-                        <p class="mb-1"><i class="bi bi-printer"></i> FAX: 042-812-202</p>
+                        <p class="mb-1"><i class="bi bi-telephone"></i> TEL: 042-862-123</p>
+                        <p class="mb-1"><i class="bi bi-printer"></i> FAX: 042-862-147</p>
                         <p class="mb-0"><i class="bi bi-envelope"></i> EMAIL: <a
                                 href="mailto:loeihospital@gmail.com">loeihospital@gmail.com</a></p>
                     </div>

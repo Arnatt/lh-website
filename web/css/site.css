@@ -86,3 +86,108 @@ a.desc:after {
 .form-group {
     margin-bottom: 1rem;
 }
+
+/*=============== ทำ Tab สำหรับข่าวสารต่างๆ =========================*/
+/* ส่วนหัวข้อหลัก */
+.site-tab-section h2 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee; /* เพิ่มเส้นใต้เล็กน้อย */
+}
+
+/* Custom Tabs Styling */
+.custom-tabs .nav-link {
+    color: #495057;
+    background-color: #e9ecef; /* สีเทาอ่อนสำหรับแท็บที่ไม่เลือก */
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    padding: 0.75rem 1.25rem;
+    margin-right: 2px; /* ช่องว่างระหว่างแท็บ */
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-tabs .nav-link:hover {
+    color: #0056b3;
+    background-color: #dee2e6;
+    border-color: #dee2e6 #dee2e6 #dee2e6;
+}
+
+.custom-tabs .nav-link.active {
+    background-color: #007bff; /* สีฟ้าสำหรับแท็บที่เลือก */
+    color: white;
+    border-color: #007bff #007bff #fff; /* ขอบบนและข้างเป็นสีฟ้า, ขอบล่างเป็นสีขาวเพื่อให้ดูเชื่อมกับ content pane */
+    border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* Custom Tab Pane Styling */
+.custom-tab-pane {
+    border: 1px solid #dee2e6;
+    border-top: none; /* เพื่อให้ดูเหมือนเป็นส่วนต่อเนื่องจากแท็บที่ active */
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0 0 0.25rem 0.25rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075); /* เพิ่มเงาเล็กน้อย */
+}
+
+/* Styling for list items inside tabs */
+.list-container {
+    padding-top: 0.5rem;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px dotted #e0e0e0; /* เส้นประเหมือนในรูป */
+    line-height: 1.5;
+}
+
+.list-item:last-child {
+    border-bottom: none; /* ไม่มีเส้นใต้ที่รายการสุดท้าย */
+}
+
+.list-item .icon-left {
+    font-size: 1.2em;
+    color: #007bff; /* สีไอคอน */
+    margin-right: 10px;
+    flex-shrink: 0; /* ป้องกันไอคอนถูกย่อ */
+}
+
+.list-item .item-title {
+    flex-grow: 1; /* ให้ชื่อข่าวขยายเต็มที่ */
+    color: #333;
+    text-decoration: none;
+    font-size: 1.05em;
+    font-weight: 500;
+}
+
+.list-item .item-title:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.list-item .item-date {
+    font-size: 0.85em;
+    color: #777;
+    margin-left: 15px; /* ระยะห่างจากชื่อข่าว */
+    flex-shrink: 0; /* ป้องกันวันที่ถูกย่อ */
+}
+
+.item-date .bi-calendar {
+    margin-right: 5px;
+    color: #999;
+}
+
+.view-all-link {
+    padding-top: 1.5rem;
+}
+
+.view-all-link .btn {
+    font-size: 0.9em;
+    padding: 0.4rem 1rem;
+    border-radius: 20px; /* ทำให้ปุ่มมีขอบโค้งมน */
+}

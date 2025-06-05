@@ -61,6 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        // ส่งข้อมูลเหล่านี้ไปยัง View
         return $this->render('index');
     }
 
@@ -124,10 +125,5 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
-    }
-
-    public function actionNews()
-    {
-        return $this->render('news');
     }
 }

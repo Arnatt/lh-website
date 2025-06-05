@@ -41,42 +41,55 @@ $this->registerCssFile('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font
         NavBar::begin([
             'brandLabel' => Html::img('@web/images/loeih-logo.png', ['alt' => 'Logo', 'class' => 'logo']),
             'brandUrl' => Yii::$app->homeUrl,
-            'options' => ['class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top']
+            'options' => ['class' => 'navbar navbar-expand-md']
         ]);
         echo Nav::widget([
             'options' => ['class' => 'navbar-nav ms-auto'],
             'items' => [
-                ['label' => 'Home', 'url' => ['/site/index']],
+                ['label' => 'หน้าแรก', 'url' => ['/site/index']],
                 [
-                    'label' => 'ข่าวสาร-ประกาศ',
+                    'label' => 'เกี่ยวกับโรงพยาบาล',
                     'items' => [
-                        ['label' => 'ประชาสัมพันธ์', 'url' => ['/site/news']],
-                        ['label' => 'ประกวดราคา', 'url' => ['/site/tender']],
-                        ['label' => 'จัดซื้อจัดจ้าง', 'url' => ['/site/purchase']],
-                        ['label' => 'รับสมัครงาน', 'url' => ['/site/job']],
+                        ['label' => 'ประวัติโรงพยาบาล', 'url' => ['/site/news']],
+                        ['label' => 'คณะผู้บริหาร', 'url' => ['/site/tender']],
+                        ['label' => 'วิสัยทัศน์/พันธกิจ', 'url' => ['/site/purchase']],
+                        ['label' => 'ITA โรงพยาบาลเลย', 'url' => ['/site/job']],
                     ],
                 ],
                 [
-                    'label' => 'บริการออนไลน์',
+                    'label' => 'ข่าวสาร-ประกาศ',
                     'items' => [
-                        ['label' => 'นัดหมายแพทย์', 'url' => ['/site/appointment']],
-                        ['label' => 'ตรวจสอบสิทธิ์', 'url' => ['/site/check-eligibility']],
-                        ['label' => 'ประวัติการรักษา', 'url' => ['/site/medical-history']],
+                        ['label' => 'ประชาสัมพันธ์', 'url' => ['/relation/news']],
+                        ['label' => 'ประกวดราคา', 'url' => ['/relation/tender']],
+                        ['label' => 'จัดซื้อจัดจ้าง', 'url' => ['/relation/purchase']],
+                        ['label' => 'รับสมัครงาน', 'url' => ['/relation/job']],
+                    ],
+                ],
+                [
+                    'label' => 'การบริการ',
+                    'items' => [
+                        ['label' => 'ตารางการออกตรวจแพทย์', 'url' => ['/service/opdschedule']],
+                        ['label' => 'ค่าห้องพิเศษ', 'url' => ['/service/viproom']],
+                        [
+                            'label' => 'Thai Care Cloud',
+                            'url' => 'https://www.thaicarecloud.org/',
+                            'linkOptions' => ['target' => '_blank'] // เปิดลิงก์ในแท็บใหม่
+                        ],
+
                     ]
                 ],
-                ['label' => 'เกี่ยวกับเรา', 'url' => ['/site/about']],
                 ['label' => 'ติดต่อเรา', 'url' => ['/site/contact']],
 
-                Yii::$app->user->isGuest
-                ? ['label' => 'Login', 'url' => ['/site/login']]
-                : '<li class="nav-item">'
-                . Html::beginForm(['/site/logout'])
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
-                    ['class' => 'nav-link btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
+                // Yii::$app->user->isGuest
+                // ? ['label' => 'Login', 'url' => ['/site/login']]
+                // : '<li class="nav-item">'
+                // . Html::beginForm(['/site/logout'])
+                // . Html::submitButton(
+                //     'Logout (' . Yii::$app->user->identity->username . ')',
+                //     ['class' => 'nav-link btn btn-link logout']
+                // )
+                // . Html::endForm()
+                // . '</li>'
             ]
         ]);
         NavBar::end();
@@ -86,7 +99,10 @@ $this->registerCssFile('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font
     <main id="main" class="flex-shrink-0" role="main">
         <div class="container">
             <?php if (!empty($this->params['breadcrumbs'])): ?>
-                <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
+                <?= Breadcrumbs::widget([
+                    'homeLink' => ['label' => 'หน้าแรก', 'url' => Yii::$app->homeUrl],
+                    'links' => $this->params['breadcrumbs']
+                ]) ?>
             <?php endif ?>
             <?= Alert::widget() ?>
             <?= $content ?>

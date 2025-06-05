@@ -22,6 +22,8 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/footer.css',
+        'css/custom.css',
+        'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css',
     ];
     public $js = [
     ];
