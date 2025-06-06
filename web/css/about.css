@@ -1,0 +1,41 @@
+:root {
+    --primary-green: #74c52c;
+    --secondary-charcoal: #687074;
+    --light-grey: #f8f9fa;
+    --white: #ffffff;
+    --dark-green: #61a823;
+}
+
+.contact-section {
+    background-color: var(--light-grey);
+    padding: 3rem 1rem;
+}
+
+.contact-section .card {
+    background-color: var(--white);
+    border-radius: 12px;
+}
+
+.contact-section .card-title {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+.contact-section p {
+    color: var(--secondary-charcoal);
+    margin-bottom: 0.75rem;
+}
+
+.contact-section a {
+    color: var(--dark-green);
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+
+.contact-section i {
+    color: var(--primary-green);
+    margin-right: 0.5rem;
+}

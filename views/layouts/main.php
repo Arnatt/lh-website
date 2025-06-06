@@ -52,7 +52,7 @@ $this->registerCssFile('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font
                     'items' => [
                         ['label' => 'ประวัติโรงพยาบาล', 'url' => ['/site/news']],
                         ['label' => 'คณะผู้บริหาร', 'url' => ['/site/tender']],
-                        ['label' => 'วิสัยทัศน์/พันธกิจ', 'url' => ['/site/purchase']],
+                        ['label' => 'วิสัยทัศน์/พันธกิจ', 'url' => ['/about/vision']],
                         ['label' => 'ITA โรงพยาบาลเลย', 'url' => ['/site/job']],
                     ],
                 ],

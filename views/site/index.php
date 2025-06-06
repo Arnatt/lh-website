@@ -3,10 +3,6 @@ use yii\bootstrap5\Tabs;
 use yii\helpers\Html;// <<< **สำคัญ: เพิ่มบรรทัดนี้เข้ามา**
 
 /** @var yii\web\View $this */
-/** @var array $newsData */ // Type hint สำหรับตัวแปรที่ส่งมาจาก Controller
-/** @var array $jobApplicationsData */
-/** @var array $priceAnnouncementsData */
-/** @var array $procurementData */
 
 $this->registerJsFile('@web/js/custom-carousel.js', ['depends' => [\yii\web\JqueryAsset::class]]);
 $this->registerCssFile('@web/css/custom.css');
@@ -14,13 +10,13 @@ $this->title = 'โรงพยาบาลเลย';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron text-center bg-transparent mt-5 mb-5">
+    <!-- <div class="jumbotron text-center bg-transparent mt-5 mb-5">
         <h1 class="display-4">Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
         <p><a class="btn btn-lg btn-success" href="https://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
+    </div> -->
 
     <div class="container mb-5">
         <div id="myCarousel" class="carousel slide position-relative" data-bs-ride="carousel">
